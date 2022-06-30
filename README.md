@@ -23,7 +23,11 @@ Dashboard Name
  Expenses Dashboard
 
 
-The code is commented with orientations to make the understanding of what i was doing easier.
+Note1: i choose to put the try/catches on the LWC calls, thats why i didnt used them in the backend.
+
+Note2: About the components, i wasnt sure if u guys wanted the component as brothers or parent > child, so i choose to make them parent > child because i thought this would be a better option in this particular scenario.
+
+Note3: The code is commented with orientations to make the understanding of what i was doing easier.
 
 Thanks.
 
