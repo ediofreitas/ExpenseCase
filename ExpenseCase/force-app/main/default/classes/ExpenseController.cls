@@ -35,7 +35,7 @@ public with sharing class ExpenseController {
         insert expense;
     }
 
-    // Method called to retrieve all the expenses in the database and display ordered by Name.
+    // Method called to retrieve all the expenses in the database and display them ordered by Name.
     @AuraEnabled //(cacheable=true) --- obs: removed the cacheable true because this is the only way to refresh the table after insert a new value
     public static List<Expense__c> getExpenses(){
         List<Expense__c> expensesList = [SELECT Id, Name, Category__c, Amount__c, Expense_Date__c, Weekly_Total_Amount__c, Monthly_Total_Amount__c FROM Expense__c ORDER BY Name];
