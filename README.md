@@ -17,7 +17,10 @@ Used Components:
  expenseCreator, expenseList
 
 Used Classes:
-ExpenseController, MonthlyExpenseSchedule, WeeklyExpenseSchedule
+ExpenseController, MonthlyExpenseSchedule, WeeklyExpenseSchedule, ExpenseTriggerHandler, ExpenseTriggerHelper
+
+Used Trigger:
+ExpenseTrigger
 
 Dashboard Name
  Expenses Dashboard
