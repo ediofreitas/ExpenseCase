@@ -22,7 +22,7 @@ ExpenseController, MonthlyExpenseSchedule, WeeklyExpenseSchedule, ExpenseTrigger
 Used Trigger:
 ExpenseTrigger
 
-Dashboard Name
+Dashboard Name:
  Expenses Dashboard
 
 
