@@ -8,7 +8,8 @@ export default class ExpenseList extends LightningElement {
     @track listContains = false;
 
     @track columns = [
-        { label: 'Label', fieldName: 'Name', type: 'text' },
+        { label: 'Label', fieldName: 'nameUrl', type: 'url', typeAttributes: {label: { fieldName: 'Name' }, 
+            target: '_blank'}},
         { label: 'Category', fieldName: 'Category__c', type: 'text' },
         { label: 'Date', fieldName: 'Expense_Date__c', type: 'date' },
         { label: 'Amount', fieldName: 'Amount__c', type: 'currency' },
@@ -28,8 +29,12 @@ export default class ExpenseList extends LightningElement {
     getExpenses(){
         getExpenses()
         .then(result =>{
-            this.expenses = result;
+            let nameUrl;
             this.listContains = true;
+            this.expenses = result.map(row => { 
+                nameUrl = `/${row.Id}`;
+                return {...row , nameUrl}
+                })
             
         }).catch(err =>{
             console.log('Error getting expenses: Check your data and try again.' + err);
