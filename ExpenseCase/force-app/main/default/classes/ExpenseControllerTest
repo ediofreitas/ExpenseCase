@@ -5,10 +5,12 @@ public with sharing class ExpenseControllerTest {
     static void unitTest(){
 
         Test.starttest();
-            ExpenseController.createExpense('label', 'Housing', date.today(), 175, 'Weekly');
-            ExpenseController.createExpense('label', 'Housing', date.today(), 175, 'Weekly');
-            ExpenseController.createExpense('label2', 'Housing', date.today(), 175, 'Monthly');
-            ExpenseController.createExpense('label2', 'Housing', date.today(), 175, 'Monthly');
+            ExpenseController.createExpense('label', 'Housing', date.newInstance(2022, 06, 09), 175, 'Weekly');
+            ExpenseController.createExpense('label', 'Housing', date.newInstance(2022, 06, 09), 175, 'Weekly');
+            ExpenseController.createExpense('label2', 'Housing', date.newInstance(2022, 06, 09), 175, 'Monthly');
+            ExpenseController.createExpense('label2', 'Housing', date.newInstance(2022, 06, 09), 175, 'Monthly');
+            ExpenseController.createExpense('label4', 'Housing', date.newInstance(2022, 06, 25), 175, 'Monthly');
+            ExpenseController.createExpense('label3', 'Housing', date.newInstance(2022, 06, 09), 175, '');
             ExpenseController.getExpenses();
         Test.stoptest();
     }
