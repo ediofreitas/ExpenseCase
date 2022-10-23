@@ -1,0 +1,15 @@
+@isTest
+public with sharing class ExpenseControllerTest {
+    
+    @isTest
+    static void unitTest(){
+
+        Test.starttest();
+            ExpenseController.createExpense('label', 'Housing', date.today(), 175, 'Weekly');
+            ExpenseController.createExpense('label', 'Housing', date.today(), 175, 'Weekly');
+            ExpenseController.createExpense('label2', 'Housing', date.today(), 175, 'Monthly');
+            ExpenseController.createExpense('label2', 'Housing', date.today(), 175, 'Monthly');
+            ExpenseController.getExpenses();
+        Test.stoptest();
+    }
+}
